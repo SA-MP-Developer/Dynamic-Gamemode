@@ -27,6 +27,20 @@ The gamemode can be installed in different ways. You can install it by hand or u
 Want to contribute? Great!
 Just send your code using a pull request or ask to become an official developer!
 
+## Required includes & plugins
+
+Those includes are required to compile the gamemode :
+- YSI4
+- easydialog
+- sscanf
+- mysql R41 by BlueG
+- streamer by Incognito
+
+Those plugins are required to run the server :
+- sscanf
+- mysql R41 by BlueG
+- streamer by Incognito
+
 # Todos
 
 For things to do, go directly to the Projects tab, it's there that we write everything!
