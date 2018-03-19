@@ -30,16 +30,16 @@ Just send your code using a pull request or ask to become an official developer!
 ## Required includes & plugins
 
 Those includes are required to compile the gamemode :
-- YSI4
-- easydialog
-- sscanf
-- mysql R41 by BlueG
-- streamer by Incognito
+- [YSI4](https://github.com/pawn-lang/YSI-Includes)
+- [easydialog](https://github.com/Awsomedude/easyDialog)
+- [sscanf](https://github.com/maddinat0r/sscanf)
+- [mysql R41 by BlueG](https://github.com/pBlueG/SA-MP-MySQL)
+- [streamer by Incognito](https://github.com/samp-incognito/samp-streamer-plugin)
 
 Those plugins are required to run the server :
-- sscanf
-- mysql R41 by BlueG
-- streamer by Incognito
+- [sscanf](https://github.com/maddinat0r/sscanf)
+- [mysql R41 by BlueG](https://github.com/pBlueG/SA-MP-MySQL)
+- [streamer by Incognito](https://github.com/samp-incognito/samp-streamer-plugin)
 
 # Todos
 
