@@ -1,0 +1,12 @@
+scriptfiles/
+sscanf/
+pawno/
+npcmodes/
+include/
+filterscripts/
+samp-license.txt
+server.cfg
+server-readme.txt
+gamemodes/DynamicSRP.amx
+*.exe
+*.amx
