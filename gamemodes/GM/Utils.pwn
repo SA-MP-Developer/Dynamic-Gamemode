@@ -7,3 +7,7 @@
 // =============================
 
 #include "GM/Utils/ConfigHelper.pwn"
+
+#include "GM/Utils/Macro.pwn"
+
+#include "GM/MYSQL/sqMain.pwn"
