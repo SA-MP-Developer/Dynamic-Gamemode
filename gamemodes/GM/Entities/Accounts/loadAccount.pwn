@@ -78,5 +78,5 @@ public Connect(playerid)
   {
     return Dialog_Show(playerid, Login, DIALOG_STYLE_PASSWORD, "Login","Please insert your password to connect", "Login", "Cancel");
   }
-  return Dialog_Show(playerid, SignUp, DIALOG_STYLE_INPUT, "Register","Please insert a password to register", "Register", "Annuler");
+  return Dialog_Show(playerid, Register, DIALOG_STYLE_INPUT, "Register","Please insert a password to register", "Register", "Annuler");
 }
