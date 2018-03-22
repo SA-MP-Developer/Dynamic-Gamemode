@@ -10,3 +10,4 @@
 
 #include "GM/Entities/Account/dataAccount.pwn"
 #include "GM/Entities/Account/registerAccount.pwn"
+#include "GM/Entities/Account/functionAccount.pwn"
