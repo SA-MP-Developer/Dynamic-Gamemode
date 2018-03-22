@@ -21,7 +21,7 @@
 
 #define GM_VERSION_MAJOR "0"
 #define GM_VERSION_MINOR "1"
-#define GM_VERSION_STATE "BETA"
+#define GM_VERSION_STATE "DEV"
 
 // =============================
 
