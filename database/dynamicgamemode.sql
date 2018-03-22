@@ -40,6 +40,16 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 
 -- --------------------------------------------------------
 
+CREATE TABLE IF NOT EXISTS `bans` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `IP` varchar(15) NOT NULL,
+  `ReasonBan` varchar(144) NOT NULL,
+  `BanBy` varchar(24) NOT NULL,
+  `BanTime` int(11) NOT NULL,
+  `HourOfBan` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Structure de la table `business`
 --
