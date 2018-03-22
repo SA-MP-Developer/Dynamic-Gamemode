@@ -1,6 +1,5 @@
 /*
   Mysql Connect 
-  Jaber the fdf 
 */
 #tryinclude "YSI\y_hooks"
 
