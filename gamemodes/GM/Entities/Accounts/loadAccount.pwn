@@ -64,7 +64,7 @@ public BanCheck(playerid)
 
   noban:
 
-  mysql_format(_Connect, query, sizeof(query), "SELECT * FROM `#ACCOUNTS_TAB` WHERE `Username` = '%s'", gAccInfos[playerid][accNickname]);
+  mysql_format(_Connect, query, sizeof(query), "SELECT * FROM `#ACCOUNTS_TAB` WHERE `pseudo` = '%s'", gAccInfos[playerid][accNickname]);
   return mysql_tquery(_Connect, query, "Connect", "i", playerid);
 }
 
