@@ -10,6 +10,7 @@ Load Houses
 */
 
 forward LoadHouses();
+forward OnLoadHouses();
 
 public LoadHouses()
 {

@@ -7,7 +7,7 @@
 // =============================
 
 #include <a_samp>
-#include <YSI/y_hooks>
+#include <YSI\y_hooks>
 
 // =============================
 
@@ -17,7 +17,8 @@ enum E_ACCOUNT_INFOS {
 	accPassword[VERY_LONG_STR],
 	accMail[254],
 	accLogged,
-	accSpawned
+	accSpawned,
+	accIp[VERY_VERY_SHORT_STR]
 }
 
 // =============================
@@ -31,9 +32,9 @@ hook OnGameModeInit()
 	for(new i = 0; i < MAX_PLAYERS; i++)
 	{
 		gAccInfos[i][accSqlID] = -1;
-		gAccInfos[i][accNickname] = "";
+		/*gAccInfos[i][accNickname] = "";
 		gAccInfos[i][accPassword] = "";
-		gAccInfos[i][accMail] = "";
+		gAccInfos[i][accMail] = "";*/
 	}
 }
 
@@ -47,7 +48,7 @@ hook OnPlayerConnect(playerid)
 ResetAccountVars(playerid)
 {
 	gAccInfos[playerid][accSqlID] = -1;
-	gAccInfos[playerid][accNickname] = "";
+	/*gAccInfos[playerid][accNickname] = "";
 	gAccInfos[playerid][accPassword] = "";
-	gAccInfos[playerid][accMail] = "";
+	gAccInfos[playerid][accMail] = "";*/
 }

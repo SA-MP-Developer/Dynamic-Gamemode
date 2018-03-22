@@ -23,6 +23,8 @@
 #define GM_VERSION_MINOR "1"
 #define GM_VERSION_STATE "DEV"
 
+#define SERVER_ENVIRONMENT 1
+
 // =============================
 
 #include <a_samp>
@@ -31,6 +33,7 @@
 
 #include "GM/Utils.pwn"
 
+#include "GM/Entities.pwn"
 
 // =============================
 

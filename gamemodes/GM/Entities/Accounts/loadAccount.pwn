@@ -8,6 +8,5 @@
 
 #define LOAD_ACCOUNT_INCLUDED
 
-#include "GM/Entities/Account/dataAccount.pwn"
-#include "GM/Entities/Account/registerAccount.pwn"
-#include "GM/Entities/Account/functionAccount.pwn"
+#include "GM/Entities/Accounts/dataAccount.pwn"
+#include "GM/Entities/Accounts/functionAccount.pwn"

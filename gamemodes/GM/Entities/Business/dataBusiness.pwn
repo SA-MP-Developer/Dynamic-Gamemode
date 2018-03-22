@@ -7,7 +7,7 @@
 // =============================
 
 #include <a_samp>
-#include <YSI/y_hooks>
+#include <YSI\y_hooks>
 
 #include "Utils.pwn"
 
@@ -41,7 +41,7 @@ hook OnGameModeInit()
 	for(new i = 0; i < MAX_BUSINESS; i++)
 	{
 		gBizInfos[i][bizSqlID] = -1;
-		gBizInfos[i][bizName] = "";
+		//gBizInfos[i][bizName] = "";
 		gBizInfos[i][bizOwner] = -1;
 		gBizInfos[i][bizPosExtX] = -1.0;
 		gBizInfos[i][bizPosExtY] = -1.0;
@@ -59,7 +59,7 @@ hook OnGameModeInit()
 ResetBizVars(bizId)
 {
 	gBizInfos[bizId][bizSqlID] = -1;
-	gBizInfos[bizId][bizName] = "";
+	//gBizInfos[bizId][bizName] = "";
 	gBizInfos[bizId][bizOwner] = -1;
 	gBizInfos[bizId][bizPosExtX] = -1.0;
 	gBizInfos[bizId][bizPosExtY] = -1.0;

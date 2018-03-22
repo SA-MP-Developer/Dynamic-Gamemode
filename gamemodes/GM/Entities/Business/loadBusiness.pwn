@@ -11,6 +11,7 @@
 // =============================
 
 forward LoadBusiness();
+forward OnLoadBusiness();
 
 public LoadBusiness()
 {

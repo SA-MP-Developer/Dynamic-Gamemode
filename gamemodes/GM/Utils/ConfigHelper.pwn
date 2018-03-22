@@ -26,17 +26,17 @@ new gConfigFile[E_CONFIG_ITEMS];
 
 // =============================
 
-LoadConfigurationFile(file[])
+stock LoadConfigurationFile(file[])
 {
 
 }
 
-SaveConfigurationFile(file[])
+stock SaveConfigurationFile(file[])
 {
 
 }
 
-GetConfigFileItem(E_CONFIG_ITEMS:item)
+stock GetConfigFileItem(E_CONFIG_ITEMS:item)
 {
 
 }

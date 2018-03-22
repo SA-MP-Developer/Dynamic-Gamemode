@@ -9,6 +9,7 @@ Load Vehicles
 */
 
 forward LoadVehicles();
+forward OnLoadVehicles();
 
 public LoadVehicles()
 {

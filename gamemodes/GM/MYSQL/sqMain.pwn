@@ -24,6 +24,6 @@
 
 #tryinclude "GM/MYSQL/sqConfig.pwn"
 
-#if !defined COMPTE_TAB
+#if !defined ACCOUNTS_TAB
 	#error Impossible de Charger le Fichier Mysql , sqConfig introuvable
 #endif
