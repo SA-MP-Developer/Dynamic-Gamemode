@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `pseudo` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `mail` varchar(50) NOT NULL,
+  `ip` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
