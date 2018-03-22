@@ -1,3 +1,9 @@
+#if defined LOAD_VEHICLES_INCLUDED
+	#endinput
+#endif
+
+#define LOAD_VEHICLES_INCLUDED
+
 /*
 Load Vehicles
 */

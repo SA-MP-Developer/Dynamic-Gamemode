@@ -1,6 +1,14 @@
-/*
-Load Business
-*/
+#if defined LOAD_BUSINESS_INCLUDED
+	#endinput
+#endif
+
+#define LOAD_BUSINESS_INCLUDED
+
+// =============================
+
+#include <a_mysql>
+
+// =============================
 
 forward LoadBusiness();
 
@@ -10,6 +18,8 @@ public LoadBusiness()
 	return 1;
 
 }
+
+// =============================
 
 public OnLoadBusiness()
 {

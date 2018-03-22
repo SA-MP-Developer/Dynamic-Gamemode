@@ -1,3 +1,10 @@
+#if defined LOAD_HOUSES_INCLUDED
+	#endinput
+#endif
+
+#define LOAD_HOUSES_INCLUDED
+
+
 /*
 Load Houses
 */
