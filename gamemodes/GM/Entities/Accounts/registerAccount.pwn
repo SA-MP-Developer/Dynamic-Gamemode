@@ -24,7 +24,7 @@ Dialog:Register(playerid, response, listitem, inputtext[])
   }
   mysql_format(_Connect, string, sizeof(string), "INSERT INTO `#ACCOUNTS_TAB` (pseudo, password, ip) VALUES ('%s', '%s', '%s')", gAccInfos[playerid][accNickname], inputtext, gAccInfos[playerid][accIp]);
   mysql_tquery(_Connect, string);
-  return Dialog_Show(playerid, Login, DIALOG_STYLE_PASSWORD, "Login", "Account SAVE: Please insert your password to login ", "Login", "Cancel");
+  return Dialog_Show(playerid, Register, DIALOG_STYLE_PASSWORD, "Login", "Account SAVE: Please insert your password to login ", "Login", "Cancel");
 }
 
 
