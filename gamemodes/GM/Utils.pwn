@@ -14,6 +14,8 @@
 
 #include "GM/MYSQL/sqMain.pwn"
 
+#include "GM/Entities/Account/loadAccount.pwn"
+
 #include "GM/Entities/Business/loadBusiness.pwn"
 
 #include "GM/Entities/Houses/loadHouses.pwn"
