@@ -10,6 +10,8 @@
 
 #include "GM/Utils/Macro.pwn"
 
+#include "GM/Utils/constantsUtils.pwn"
+
 #include "GM/MYSQL/sqMain.pwn"
 
 #include "GM/Entities/Business/loadBusiness.pwn"
