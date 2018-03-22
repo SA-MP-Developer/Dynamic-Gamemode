@@ -14,8 +14,10 @@
 enum E_ACCOUNT_INFOS {
 	accSqlID,
 	accNickname[MAX_PLAYER_NAME],
-	accPassword[512],
-	accMail[254]
+	accPassword[VERY_LONG_STR],
+	accMail[254],
+	accLogged,
+	accSpawned
 }
 
 // =============================
@@ -37,7 +39,7 @@ hook OnGameModeInit()
 
 hook OnPlayerConnect(playerid)
 {
-
+	ResetAccountVars(playerid);
 }
 
 // =============================
