@@ -18,7 +18,7 @@
 
 #tryinclude "GM/MYSQL/sqFunction.pwn"
 
-#if !defined GetData
+#if !defined MysqlInit
 	#error Impossible de Charger le Fichier Mysql , sqFunction introuvable
 #endif
 
