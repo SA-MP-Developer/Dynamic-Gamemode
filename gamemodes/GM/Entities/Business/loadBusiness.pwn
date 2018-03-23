@@ -15,7 +15,7 @@ forward OnLoadBusiness();
 
 public LoadBusiness()
 {
-	mysql_tquery(g_Sql, "SELECT * FROM `"#BUSINESS_TAB"`", "OnLoadBusiness");
+	mysql_tquery(_Connect, "SELECT * FROM `"#BUSINESS_TAB"`", "OnLoadBusiness");
 	return 1;
 
 }
