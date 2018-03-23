@@ -33,9 +33,30 @@
 
 #define SERVER_ENVIRONMENT 1
 
-// =============================
+/***
+ *        ___                          _                  _           
+ *       /   \___ _ __   ___ _ __   __| | __ _ _ __   ___(_) ___  ___ 
+ *      / /\ / _ \ '_ \ / _ \ '_ \ / _` |/ _` | '_ \ / __| |/ _ \/ __|
+ *     / /_//  __/ |_) |  __/ | | | (_| | (_| | | | | (__| |  __/\__ \
+ *    /___,' \___| .__/ \___|_| |_|\__,_|\__,_|_| |_|\___|_|\___||___/
+ *               |_|                                                  
+ *
+ */
 
 #include <a_samp>
+//#include <a_mysql>
+//#include <crashdetect>
+//#include <streamer>
+//#include <Pawn.CMD>
+//#include <sscanf2>
+#include <YSI\y_hooks>
+#include <YSI\y_iterate>
+//#include <easydialog>
+
+// UNIT TESTS FRAMEWORK
+// Uncomment to disable.
+//
+#include "GM_tests/run_tests"
 
 // =============================
 

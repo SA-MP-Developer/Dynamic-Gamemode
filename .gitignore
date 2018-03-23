@@ -1,12 +1,28 @@
-scriptfiles/
-sscanf/
-pawno/
-npcmodes/
-include/
-filterscripts/
+# ignore some project folders #
+scriptfiles
+sscanf
+pawno
+npcmodes
+include
+filterscripts
+plugins
+
+# ignore samp server files #
 samp-license.txt
 server.cfg
 server-readme.txt
-gamemodes/DynamicSRP.amx
-*.exe
+server_log.txt
+crashinfo.txt
+LICENSE
+
+# ignore gm builds #
 *.amx
+gamemodes/*.xml
+gamemodes/*.xsl
+
+# ignore windows libs & exe #
+*.exe
+*.dll
+
+# ignore linux libs #
+*.so
