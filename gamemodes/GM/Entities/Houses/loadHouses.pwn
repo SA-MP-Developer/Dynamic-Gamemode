@@ -14,7 +14,7 @@ forward OnLoadHouses();
 
 public LoadHouses()
 {
-	mysql_tquery(g_Sql, "SELECT * FROM `"#HOUSES_TAB"`", "OnLoadHouses");
+	mysql_tquery(_Connect, "SELECT * FROM `"#HOUSES_TAB"`", "OnLoadHouses");
 	return 1;
 
 }
