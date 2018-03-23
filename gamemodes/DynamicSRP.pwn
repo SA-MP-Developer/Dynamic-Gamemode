@@ -18,6 +18,8 @@
 */
 #if __Pawn != 0x30A
 	#error Please Download Zeex's PAWN Compiler: github.com/Zeex/pawn/releases
+#elseif __Pawn >= 0x0400		 
+	#error This GameMode does not support PAWN 4
 #endif
 
 /**----------------------------------------------------**/
