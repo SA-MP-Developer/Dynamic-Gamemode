@@ -8,11 +8,9 @@
 
 #define LOAD_ACCOUNT_INCLUDED
 
-#include "GM/MYSQL/sqlMain.pwn"
-
-#include "GM/Entities/Account/dataAccount.pwn"
-#include "GM/Entities/Account/registerAccount.pwn"
-#include "GM/Entities/Account/functionAccount.pwn"
+#include "GM/Entities/Accounts/dataAccount.pwn"
+#include "GM/Entities/Accounts/registerAccount.pwn"
+#include "GM/Entities/Accounts/functionAccount.pwn"
 
 forward BanCheck(playerid);
 forward Connect(playerid);
@@ -20,7 +18,7 @@ forward Connect(playerid);
 Player::Account(playerid)
 {
 	GetPlayerName(playerid, gAccInfos[playerid][accNickname], MAX_PLAYER_NAME);
-	GetPlayerIp(playerid, gAccInfos[playerid][pIp], 16);	
+	GetPlayerIp(playerid, gAccInfos[playerid][accIp], 16);	
 }
 
 Player::Disconnect(playerid, reason)
@@ -39,7 +37,7 @@ Player::RequestClass(playerid, classid)
             query[150];
       TogglePlayerSpectating(playerid, true);
 
-      mysql_format(_Connect, query, sizeof(query), "SELECT * FROM `#BANS_TABLE` WHERE `IP` = '%s'", gAccInfos[playerid][pIp]);
+      mysql_format(_Connect, query, sizeof(query), "SELECT * FROM `#BANS_TABLE` WHERE `IP` = '%s'", gAccInfos[playerid][accIp]);
       mysql_tquery(_Connect, query, "BanCheck", "i", playerid);
   }
   return 1;

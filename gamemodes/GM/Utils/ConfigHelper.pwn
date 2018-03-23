@@ -22,7 +22,7 @@ enum E_CONFIG_ITEMS {
 	LANGUAGE
 }
 
-new gConfigFile[E_CONFIG_ITEMS];
+stock gConfigFile[E_CONFIG_ITEMS];
 
 // =============================
 

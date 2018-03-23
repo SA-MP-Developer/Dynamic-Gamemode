@@ -13,7 +13,7 @@ forward OnLoadVehicles();
 
 public LoadVehicles()
 {
-	mysql_tquery(g_Sql, "SELECT * FROM `"#VEHICLES_TAB"`", "OnLoadVehicles");
+	mysql_tquery(_Connect, "SELECT * FROM `"#VEHICLES_TAB"`", "OnLoadVehicles");
 	return 1;
 
 }
