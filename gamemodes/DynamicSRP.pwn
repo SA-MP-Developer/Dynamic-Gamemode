@@ -44,14 +44,8 @@
  */
 
 #include <a_samp>
-//#include <a_mysql>
-//#include <crashdetect>
-//#include <streamer>
-//#include <Pawn.CMD>
-//#include <sscanf2>
 #include <YSI\y_hooks>
 #include <YSI\y_iterate>
-//#include <easydialog>
 
 // UNIT TESTS FRAMEWORK
 // Uncomment to disable.
