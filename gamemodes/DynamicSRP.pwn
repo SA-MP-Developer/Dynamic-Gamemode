@@ -1,5 +1,3 @@
-//#pragma compat 1
-
 #if defined MAIN_FILE_INCLUDED
 	#endinput
 #endif
