@@ -8,11 +8,11 @@
 
 #define LOAD_ACCOUNT_INCLUDED
 
-#include "GM/MYSQL/sqlMain.pwn"
+#include "GM/MYSQL/sqMain.pwn"
 
-#include "GM/Entities/Account/dataAccount.pwn"
-#include "GM/Entities/Account/registerAccount.pwn"
-#include "GM/Entities/Account/functionAccount.pwn"
+#include "GM/Entities/Accounts/dataAccount.pwn"
+#include "GM/Entities/Accounts/registerAccount.pwn"
+#include "GM/Entities/Accounts/functionAccount.pwn"
 
 forward BanCheck(playerid);
 forward Connect(playerid);
