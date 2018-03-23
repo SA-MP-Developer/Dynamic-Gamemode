@@ -16,7 +16,15 @@
 		 |___/                                                     
 
 */
+#if __Pawn != 0x30A
+	#error Please Download Zeex's PAWN Compiler: github.com/Zeex/pawn/releases
+#endif
 
+/**----------------------------------------------------**/
+		 
+#if __compat != 1
+	#pragma compat 1
+#endif
 // =============================
 
 #define GM_VERSION_MAJOR "0"
