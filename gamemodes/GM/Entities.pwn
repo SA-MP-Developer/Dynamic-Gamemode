@@ -6,6 +6,8 @@
 
 // =============================
 
+#include "GM/Entities/BaseEntities/collider"
+
 #include "GM/Entities/Accounts/loadAccount.pwn"
 
 #include "GM/Entities/Business/loadBusiness.pwn"
