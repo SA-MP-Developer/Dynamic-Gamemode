@@ -32,6 +32,10 @@ INTERNAL_SaveColliderData(colid, data_type, data_id)
     Streamer_SetArrayData(STREAMER_TYPE_AREA, colid, E_STREAMER_EXTRA_ID, col_data);
 }
 
+//
+// PUBLIC FUNCTIONS
+//
+
 /**
 	<summary>Get data of collider</summary>
 	<param name="colid"></param>
@@ -50,10 +54,6 @@ GetColliderData(colid, &data_type, &data_id)
     }
     return 0;
 }
-
-//
-// PUBLIC FUNCTIONS
-//
 
 /**
 	<summary>Create Collider</summary>
@@ -143,7 +143,7 @@ hook OnPlayerEnterDynArea(playerid, colid)
     return Y_HOOKS_BREAK_RETURN_1;
 }
 
-// Raise OnPlayerEnterCollider Event when player exits from a collider
+// Raise OnPlayerExitCollider Event when player exits from a collider
 hook OnPlayerLeaveDynArea(playerid, colid)
 {
     new d_type, d_id;
