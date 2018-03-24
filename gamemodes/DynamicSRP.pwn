@@ -49,6 +49,12 @@
 #include <YSI\y_hooks>
 #include <YSI\y_iterate>
 
+#if defined FindModelFileNameFromCRC
+	#define SAMP_VERSION "0.3.7DL"
+#else
+	#define SAMP_VERSION "0.3.7"
+#endif
+
 // UNIT TESTS FRAMEWORK
 // Uncomment to disable.
 //
