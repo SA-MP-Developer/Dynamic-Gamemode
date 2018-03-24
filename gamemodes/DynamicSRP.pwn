@@ -55,18 +55,17 @@
 	#define SAMP_VERSION "0.3.7"
 #endif
 
-// UNIT TESTS FRAMEWORK
-// Uncomment to disable.
-//
-#include "GM_tests/run_tests"
-
 // =============================
 
 #include "GM/Utils.pwn"
 
 #include "GM/Entities.pwn"
-
 // =============================
+
+// UNIT TESTS FRAMEWORK
+// Uncomment to disable.
+//
+#include "GM_tests/run_tests"
 
 main()
 {
