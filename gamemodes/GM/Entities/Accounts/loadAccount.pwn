@@ -28,16 +28,16 @@ Player::Disconnect(playerid, reason)
 		ResetAccountVars(playerid);
 	}
 }
-
 Player::RequestClass(playerid, classid)
 {
   if(!IsPlayerLoged(playerid))
   {
       static
             query[150];
+			
       TogglePlayerSpectating(playerid, true);
 
-      mysql_format(_Connect, query, sizeof(query), "SELECT * FROM `#BANS_TABLE` WHERE `IP` = '%s'", gAccInfos[playerid][accIp]);
+      mysql_format(_Connect, query, sizeof(query), "SELECT * FROM `#BANS_TABLE` WHERE `IP` = '%s' AND BanTime > UNIX_TIMESTAMP()", gAccInfos[playerid][accIp]);
       mysql_tquery(_Connect, query, "BanCheck", "i", playerid);
   }
   return 1;

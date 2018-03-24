@@ -23,7 +23,9 @@ enum E_ACCOUNT_INFOS {
 
 // =============================
 
-new gAccInfos[MAX_PLAYERS][E_ACCOUNT_INFOS];
+new 
+	gAccInfos[MAX_PLAYERS][E_ACCOUNT_INFOS],
+	gAccInfosClone[1][E_ACCOUNT_INFOS];
 
 // =============================
 
@@ -31,10 +33,7 @@ hook OnGameModeInit()
 {
 	for(new i = 0; i < MAX_PLAYERS; i++)
 	{
-		gAccInfos[i][accSqlID] = -1;
-		/*gAccInfos[i][accNickname] = "";
-		gAccInfos[i][accPassword] = "";
-		gAccInfos[i][accMail] = "";*/
+		ResetAccountVars(i);
 	}
 }
 
@@ -47,8 +46,5 @@ hook OnPlayerConnect(playerid)
 
 ResetAccountVars(playerid)
 {
-	gAccInfos[playerid][accSqlID] = -1;
-	/*gAccInfos[playerid][accNickname] = "";
-	gAccInfos[playerid][accPassword] = "";
-	gAccInfos[playerid][accMail] = "";*/
+	gAccInfos[playerid] = gAccInfosClone[0];
 }
