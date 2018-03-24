@@ -23,10 +23,8 @@ enum E_ACCOUNT_INFOS {
 
 // =============================
 
-new 
-	gAccInfos[MAX_PLAYERS][E_ACCOUNT_INFOS],
-	gAccInfosClone[1][E_ACCOUNT_INFOS];
-
+new gAccInfos[MAX_PLAYERS][E_ACCOUNT_INFOS];	
+static gAccInfosClone[1][E_ACCOUNT_INFOS];
 // =============================
 
 hook OnGameModeInit()
