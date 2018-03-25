@@ -82,7 +82,7 @@ GetWeather()
 	<returns>No return</returns>
 	<remarks>you can pick one param or more</remarks>	
 */
-GetWeatherInfo(&cur_weather=0, &next_weather=0, &time_cycle=0)
+stock GetWeatherInfo(&cur_weather=0, &next_weather=0, &time_cycle=0)
 {
 	cur_weather = _cur_weather;
 	next_weather = _next_weather;
@@ -94,7 +94,7 @@ GetWeatherInfo(&cur_weather=0, &next_weather=0, &time_cycle=0)
 	<param name="weatherid"></param>
 	<returns>No return</returns>
 */
-SetNextWeather(weatherid)
+stock SetNextWeather(weatherid)
 {
 	_next_weather = weatherid;
 }
@@ -107,7 +107,7 @@ SetNextWeather(weatherid)
 	<param name="hours">time in hours</param>
 	<returns>No return</returns>
 */
-SetTimeBeforeUpdateWeather(hours)
+stock SetTimeBeforeUpdateWeather(hours)
 {
 	if(hours < 1)
 	{
