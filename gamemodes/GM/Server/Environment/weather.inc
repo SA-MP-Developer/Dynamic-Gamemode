@@ -134,6 +134,6 @@ hook EachFiveMinutes()
 // applies default weather on init.
 hook OnGameModeInit()
 {
-	SetWeather(_cur_weather);
+	AC_SetWeather(_cur_weather);
 	return Y_HOOKS_CONTINUE_RETURN_1;
 }
