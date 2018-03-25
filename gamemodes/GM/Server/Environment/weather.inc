@@ -1,12 +1,13 @@
 #if defined SERVER_ENVIRONMENT_WEATHER
 	#endinput
 #endif
-
 #define SERVER_ENVIRONMENT_WEATHER
-#include <YSI\y_hooks>
+
+#include "GM/Utils/date_manipulations"
 #include "GM/Server/Common/generic_timers"
 #include "GM/Server/Environment/weather_type"
 
+#include <YSI\y_hooks>
 #define DEF_WEATHER SUNNY_LA
 
 // default weather update time in hours
