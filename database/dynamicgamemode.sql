@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 25, 2018 at 08:06 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Hôte : 127.0.0.1
+-- Généré le :  Dim 25 mars 2018 à 08:58
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,15 +19,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sa-mp-fr`
+-- Base de données :  `sa-mp-fr`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `accounts`
+-- Structure de la table `accounts`
 --
-
+DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
   `pseudo` varchar(50) NOT NULL,
@@ -37,9 +39,9 @@ CREATE TABLE `accounts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bans`
+-- Structure de la table `bans`
 --
-
+DROP TABLE IF EXISTS `bans`;
 CREATE TABLE `bans` (
   `ID` int(11) NOT NULL,
   `IP` varchar(15) NOT NULL,
@@ -52,9 +54,9 @@ CREATE TABLE `bans` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `business`
+-- Structure de la table `business`
 --
-
+DROP TABLE IF EXISTS `business`;
 CREATE TABLE `business` (
   `id` int(11) NOT NULL,
   `idOwner` int(11) NOT NULL,
@@ -72,9 +74,9 @@ CREATE TABLE `business` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `factions`
+-- Structure de la table `factions`
 --
-
+DROP TABLE IF EXISTS `factions`;
 CREATE TABLE `factions` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -85,9 +87,9 @@ CREATE TABLE `factions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `houses`
+-- Structure de la table `houses`
 --
-
+DROP TABLE IF EXISTS `houses`;
 CREATE TABLE `houses` (
   `id` int(11) NOT NULL,
   `idType` int(11) NOT NULL,
@@ -97,9 +99,9 @@ CREATE TABLE `houses` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vehicles`
+-- Structure de la table `vehicles`
 --
-
+DROP TABLE IF EXISTS `vehicles`;
 CREATE TABLE `vehicles` (
   `id` int(11) NOT NULL,
   `idModel` int(11) NOT NULL,
@@ -120,9 +122,9 @@ CREATE TABLE `vehicles` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vehicles_params`
+-- Structure de la table `vehicles_params`
 --
-
+DROP TABLE IF EXISTS `vehicles_params`;
 CREATE TABLE `vehicles_params` (
   `VehicleSQLID` int(11) NOT NULL,
   `Engine` tinyint(1) NOT NULL,
@@ -143,9 +145,9 @@ CREATE TABLE `vehicles_params` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vehicles_trunk`
+-- Structure de la table `vehicles_trunk`
 --
-
+DROP TABLE IF EXISTS `vehicles_trunk`;
 CREATE TABLE `vehicles_trunk` (
   `id` int(11) NOT NULL,
   `VehicleID` int(11) NOT NULL,
@@ -155,91 +157,98 @@ CREATE TABLE `vehicles_trunk` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `accounts`
+-- Index pour la table `accounts`
 --
 ALTER TABLE `accounts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `bans`
+-- Index pour la table `bans`
 --
 ALTER TABLE `bans`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `business`
+-- Index pour la table `business`
 --
 ALTER TABLE `business`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `factions`
+-- Index pour la table `factions`
 --
 ALTER TABLE `factions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `houses`
+-- Index pour la table `houses`
 --
 ALTER TABLE `houses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `vehicles`
+-- Index pour la table `vehicles`
 --
 ALTER TABLE `vehicles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `vehicles_params`
+-- Index pour la table `vehicles_params`
 --
 ALTER TABLE `vehicles_params`
   ADD PRIMARY KEY (`VehicleSQLID`);
 
 --
--- Indexes for table `vehicles_trunk`
+-- Index pour la table `vehicles_trunk`
 --
 ALTER TABLE `vehicles_trunk`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `accounts`
+-- AUTO_INCREMENT pour la table `accounts`
 --
 ALTER TABLE `accounts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `bans`
+-- AUTO_INCREMENT pour la table `bans`
 --
 ALTER TABLE `bans`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `factions`
+-- AUTO_INCREMENT pour la table `factions`
 --
 ALTER TABLE `factions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `houses`
+-- AUTO_INCREMENT pour la table `houses`
 --
 ALTER TABLE `houses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `vehicles`
+-- AUTO_INCREMENT pour la table `vehicles`
 --
 ALTER TABLE `vehicles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `vehicles_trunk`
+-- AUTO_INCREMENT pour la table `vehicles_trunk`
 --
 ALTER TABLE `vehicles_trunk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
