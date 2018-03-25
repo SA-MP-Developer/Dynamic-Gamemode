@@ -39,12 +39,15 @@ public OnLoadVehicles()
 		cache_get_value_name_int(i, "Interior", vAccInfos[vehicleid][vInt]);
 		cache_get_value_name_int(i, "VirtualWorld", vAccInfos[vehicleid][vVW]);
 		
-		cache_get_value_name_int(i, "Color1", vAccInfos[vehicleid][vColor][0]);
-		cache_get_value_name_int(i, "Color2", vAccInfos[vehicleid][vColor][1]);
+		cache_get_value_name_int(i, "ColorOne", vAccInfos[vehicleid][vColor][0]);
+		cache_get_value_name_int(i, "ColorTwo", vAccInfos[vehicleid][vColor][1]);
 		
 		
-		vAccInfos[vehicleid][vIdIG] = CreateVehicle(playerid, vAccInfos[vehicleid][vPos][0], vAccInfos[vehicleid][vPos][1], vAccInfos[vehicleid][vPos][2], vAccInfos[vehicleid][vPos][5], vAccInfos[vehicleid][vColor][0], vAccInfos[vehicleid][vColor][0], 0, 0);
-		SetVehicleAngularVelocity(vehicleid, vAccInfos[vehicleid][vPos][3], vAccInfos[vehicleid][vPos][4], vAccInfos[vehicleid][vPos][5])
+		vAccInfos[vehicleid][vIdIG] = CreateVehicle(playerid, vAccInfos[vehicleid][vPos][0], vAccInfos[vehicleid][vPos][1], vAccInfos[vehicleid][vPos][2], vAccInfos[vehicleid][vPos][5], vAccInfos[vehicleid][vColor][0], vAccInfos[vehicleid][vColor][1], 0, 0);
+		SetVehicleAngularVelocity(vehicleid, vAccInfos[vehicleid][vPos][3], vAccInfos[vehicleid][vPos][4], vAccInfos[vehicleid][vPos][5]);
+		SetVehicleVirtualWorld(vehicleid, cache_get_value_name_int(i, "VirtualWorld", vAccInfos[vehicleid][vVW]);
+		
+		if(vAccInfos[vehicleid][vInt] != 0) LinkVehicleToInterior(vehicleid, vAccInfos[vehicleid][vInt]);
 	}
 	return 1;
 }
