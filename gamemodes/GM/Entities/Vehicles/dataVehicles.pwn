@@ -4,7 +4,7 @@
 
 #define DATA_VEHICLES_INCLUDED
 
-enum v_data_vehicles {
+enum V_DATA_VEHICLES {
 	vIdSQL, //id sql
 	vIdIG, //id in-game
 	vModelID,
@@ -33,4 +33,4 @@ enum v_data_vehicles {
 }
 
 new
-	vAccInfos[MAX_VEHICLES][v_data_vehicles];
+	vAccInfos[MAX_VEHICLES][V_DATA_VEHICLES];
