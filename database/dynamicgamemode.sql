@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2018 at 09:44 PM
+-- Generation Time: Mar 25, 2018 at 08:06 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dynamicgamemode`
+-- Database: `sa-mp-fr`
 --
 
 -- --------------------------------------------------------
@@ -112,8 +112,8 @@ CREATE TABLE `vehicles` (
   `RotZ` float NOT NULL,
   `Interior` int(11) NOT NULL,
   `VirtualWorld` int(11) NOT NULL,
-  `Color1` int(11) NOT NULL,
-  `Color2` int(11) NOT NULL,
+  `ColorOne` int(11) NOT NULL,
+  `ColorTwo` int(11) NOT NULL,
   `Plate` varchar(255) NOT NULL DEFAULT 'Aucun'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
