@@ -60,6 +60,8 @@
 #include "GM/Utils.pwn"
 
 #include "GM/Entities.pwn"
+
+#include "GM/Server/startup.inc"
 // =============================
 
 // UNIT TESTS FRAMEWORK
