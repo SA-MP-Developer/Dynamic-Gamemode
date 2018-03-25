@@ -5,7 +5,7 @@
 
 #include "GM/Utils/date_manipulations"
 #include "GM/Server/Common/generic_timers"
-#include "GM/Server/Environment/weather_type"
+#include "GM/Server/Environment/enums"
 
 #include <YSI\y_hooks>
 #define DEF_WEATHER SUNNY_LA

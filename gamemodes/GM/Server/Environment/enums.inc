@@ -1,8 +1,8 @@
-#if defined SERVER_ENV_WEATH_TYPE
+#if defined SERVER_ENV_ENUMS
     #endinput
 #endif
 
-#define SERVER_ENV_WEATH_TYPE
+#define SERVER_ENV_ENUMS
 
 enum
 {
