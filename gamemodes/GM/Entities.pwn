@@ -14,4 +14,5 @@
 
 #include "GM/Entities/Houses/loadHouses.pwn"
 
+#include "GM/Entities/Vehicles/dataVehicles.pwn"
 #include "GM/Entities/Vehicles/loadVehicles.pwn"
