@@ -42,6 +42,11 @@ hook OnPlayerConnect(playerid)
 
 // =============================
 
+/**
+	<summary>Reset an account variables</summary>
+	<param name="playerid">Player In Game ID</param>
+	<returns>Nothing</returns>
+*/
 ResetAccountVars(playerid)
 {
 	gAccInfos[playerid] = gAccInfosClone[0];

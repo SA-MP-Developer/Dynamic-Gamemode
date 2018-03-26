@@ -52,11 +52,19 @@ hook OnGameModeInit()
 		gBizInfos[i][bizIdType] = -1;
 		gBizInfos[i]bizVW] = -1;
 	}
+
+	return Y_HOOKS_CONTINUE_RETURN_1;
 }
 
 // =============================
 
-ResetBizVars(bizId)
+
+/**
+	<summary>Reset a business variables</summary>
+	<param name="bizId">Business In Game ID</param>
+	<returns>Nothing</returns>
+*/
+stock ResetBizVars(bizId)
 {
 	gBizInfos[bizId][bizSqlID] = -1;
 	//gBizInfos[bizId][bizName] = "";
