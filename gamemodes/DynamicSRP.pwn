@@ -64,7 +64,7 @@
 
 #include "GM/Server/startup.inc"
 
- #include "GM/Server/server_config.inc"
+#include "GM/Server/server_config.inc"
 // =============================
 
 // UNIT TESTS FRAMEWORK
