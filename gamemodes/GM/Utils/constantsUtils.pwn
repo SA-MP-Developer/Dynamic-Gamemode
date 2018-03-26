@@ -20,3 +20,4 @@
 // =======
 
 #define MAX_BUSINESS			1024
+#define MAX_HOUSES				1024
