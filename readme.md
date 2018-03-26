@@ -36,6 +36,7 @@ Those includes are required to compile the gamemode :
 - [sscanf](https://github.com/maddinat0r/sscanf)
 - [mysql R41 by BlueG](https://github.com/pBlueG/SA-MP-MySQL)
 - [streamer by Incognito](https://github.com/samp-incognito/samp-streamer-plugin)
+- [Zeex's PAWN Compiler](https://github.com/Zeex/pawn/releases)
 
 Those plugins are required to run the server :
 - [sscanf](https://github.com/maddinat0r/sscanf)
