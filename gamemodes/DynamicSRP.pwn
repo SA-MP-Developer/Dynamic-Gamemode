@@ -49,6 +49,7 @@
 #include <YSI\y_hooks>
 #include <YSI\y_iterate>
 
+
 #if defined FindModelFileNameFromCRC
 	#define SAMP_VERSION "0.3.7DL"
 #else
@@ -62,6 +63,8 @@
 #include "GM/Entities.pwn"
 
 #include "GM/Server/startup.inc"
+
+#include "GM/Server/server_config.inc"
 // =============================
 
 // UNIT TESTS FRAMEWORK
@@ -69,8 +72,14 @@
 //
 #include "GM_tests/run_tests"
 
+
+
+
 main()
 {
 	printf(" ** Dynamic SRP Started **");
 	printf(" ** Version : %s.%s.%s", GM_VERSION_STATE, GM_VERSION_MAJOR, GM_VERSION_MINOR);
 }
+
+
+
