@@ -22,7 +22,8 @@ enum E_CONFIG_ITEMS {
 	HOSTNAME[SHORT_STR],
 	MAPNAME[SHORT_STR],
 	LANGUAGE[SHORT_STR],
-	MODENAME[SHORT_STR]
+	MODENAME[SHORT_STR],
+	WEBSITE[NORMAL_STR]
 }
 
 stock gConfigFile[E_CONFIG_ITEMS];
@@ -34,7 +35,7 @@ stock gConfigFile[E_CONFIG_ITEMS];
 	<param name="file">The file to be loaded</param>
 	<returns>True if everything is ok, false otherwise</returns>
 */
-stock LoadConfigurationFile(file[])
+stock bool:LoadConfigurationFile(file[])
 {
 	return INI_ParseFile(file, "ServerConfig_%s");
 }
@@ -54,6 +55,7 @@ stock SaveConfigurationFile(file[])
 	INI_WriteString(confFile, "mapname", gConfigFile[MAPNAME]);
 	INI_WriteString(confFile, "language", gConfigFile[LANGUAGE]);
 	INI_WriteString(confFile, "modname", gConfigFile[MODENAME]);
+	INI_WriteString(confFile, "website", gConfigFile[WEBSITE]);
 
 	INI_SetTag(confFile, "mysql");
 
@@ -84,6 +86,7 @@ public ServerConfig_general(name[], value[])
 	INI_String("mapname", gConfigFile[MAPNAME], SHORT_STR);
 	INI_String("language", gConfigFile[LANGUAGE], SHORT_STR);
 	INI_String("modname", gConfigFile[MODENAME], SHORT_STR);
+	INI_String("website", gConfigFile[WEBSITE], NORMAL_STR);
 
 	return 1;
 }

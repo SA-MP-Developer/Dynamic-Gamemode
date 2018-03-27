@@ -3,9 +3,9 @@
 #endif
 #define SERVER_ENVIRONMENT_WEATHER
 
-#include "GM/Utils/date_manipulations"
-#include "GM/Server/Common/generic_timers"
-#include "GM/Server/Environment/enums"
+#include "GM/Utils/dateManipulations.pwn"
+#include "GM/Server/Common/genericTimers.pwn"
+#include "GM/Server/Environment/enums.pwn"
 
 #include <YSI\y_hooks>
 #define DEF_WEATHER SUNNY_LA

@@ -6,10 +6,12 @@
 
 // =============================
 
-#include "GM/Utils/ConfigHelper.pwn"
+#include "GM/Utils/configHelper.pwn"
 
-#include "GM/Utils/Macro.pwn"
+#include "GM/Utils/macro.pwn"
 
 #include "GM/Utils/constantsUtils.pwn"
+
+#include "GM/Utils/dateManipulations.pwn"
 
 #include "GM/MYSQL/sqMain.pwn"
