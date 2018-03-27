@@ -19,7 +19,7 @@ Dialog:Login(playerid, response, listitem, inputtext[])
 
 	format(gAccInfos[playerid][accPassword], 129, inputtext);
 
-	mysql_format(_Connect, string, sizeof(string), "SELECT * FROM `#ACCOUNTS_TAB` WHERE `pseudo` = '%s'", gAccInfos[playerid][accNickname]);
+	mysql_format(_Connect, string, sizeof(string), "SELECT * FROM `#ACCOUNTS_TAB` WHERE `pseudo` = '%s' AND `password`= '%s' ORDER BY id ASC LIMIT 1", gAccInfos[playerid][accNickname], gAccInfos[playerid][accPassword]);
 	return mysql_tquery(_Connect, string, "CheckPass", "i", playerid);
 }
 
@@ -28,14 +28,14 @@ Dialog:Login(playerid, response, listitem, inputtext[])
 public CheckPass(playerid)
 {
 	static
-				string[129], query[129], pass[129];
-	cache_get_value_name(0, "password", pass);
-
-	if(strcmp(pass, gAccInfos[playerid][accPassword], true) == 0)
+				string[129], query[129];
+	
+	if(!cache_get_row_count()) 
+		return Dialog_Show(playerid, Login, DIALOG_STYLE_PASSWORD, "Login", "Error :( Password Incorrect: Please insert your Password to login", "Login", "Cancel");
+	else
 	{
-    //Spawn
+		//spawn
 	}
-	else return Dialog_Show(playerid, Login, DIALOG_STYLE_PASSWORD, "Login", "Error :( Password Incorrect: Please insert your Password to login", "Login", "Cancel");
 
 	return 1;
 }
