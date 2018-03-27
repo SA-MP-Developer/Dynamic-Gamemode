@@ -20,7 +20,8 @@ enum E_HOUSE_INFOS {
 
 // =============================
 
-new gHousesInfos[MAX_HOUSES][E_HOUSE_INFOS];
+new gHousesInfos[MAX_HOUSES][E_HOUSE_INFOS],
+    gHousesInfosClone[1][E_HOUSE_INFOS];
 
 // =============================
 
@@ -39,5 +40,5 @@ hook OnGameModeInit()
 */
 stock ResetHouseVars(houseID)
 {
-
+	gHousesInfos[houseID] = gHousesInfosClone[0];
 }
