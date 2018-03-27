@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 27 mars 2018 à 18:43
+-- Généré le :  mar. 27 mars 2018 à 18:57
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -42,6 +42,23 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `skin` int(11) NOT NULL,
   `idInventory` int(11) NOT NULL,
   `gender` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `bans`
+--
+
+DROP TABLE IF EXISTS `bans`;
+CREATE TABLE IF NOT EXISTS `bans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(50) NOT NULL,
+  `ip` varchar(50) NOT NULL,
+  `reasonBan` varchar(200) NOT NULL,
+  `banBy` varchar(50) NOT NULL,
+  `banTime` timestamp NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -237,6 +254,9 @@ CREATE TABLE IF NOT EXISTS `vehicles` (
   `idModel` int(11) NOT NULL,
   `idTrunk` int(11) NOT NULL,
   `idOwner` int(11) NOT NULL,
+  `posX` float NOT NULL,
+  `posY` float NOT NULL,
+  `posZ` float NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
