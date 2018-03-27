@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 22 mars 2018 à 18:19
+-- Généré le :  mar. 27 mars 2018 à 18:43
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -34,21 +34,18 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `pseudo` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `mail` varchar(50) NOT NULL,
-  `ip` varchar(50) NOT NULL,
+  `cash` int(11) NOT NULL,
+  `kills` int(11) NOT NULL,
+  `deaths` int(11) NOT NULL,
+  `experience` int(11) NOT NULL,
+  `telNumber` int(11) NOT NULL,
+  `skin` int(11) NOT NULL,
+  `idInventory` int(11) NOT NULL,
+  `gender` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
-
-CREATE TABLE IF NOT EXISTS `bans` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `IP` varchar(15) NOT NULL,
-  `ReasonBan` varchar(144) NOT NULL,
-  `BanBy` varchar(24) NOT NULL,
-  `BanTime` int(11) NOT NULL,
-  `HourOfBan` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Structure de la table `business`
@@ -73,6 +70,46 @@ CREATE TABLE IF NOT EXISTS `business` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `businesstype`
+--
+
+DROP TABLE IF EXISTS `businesstype`;
+CREATE TABLE IF NOT EXISTS `businesstype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `price` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `containers`
+--
+
+DROP TABLE IF EXISTS `containers`;
+CREATE TABLE IF NOT EXISTS `containers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idOwner` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `containerstype`
+--
+
+DROP TABLE IF EXISTS `containerstype`;
+CREATE TABLE IF NOT EXISTS `containerstype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `factions`
 --
 
@@ -82,6 +119,39 @@ CREATE TABLE IF NOT EXISTS `factions` (
   `name` varchar(50) NOT NULL,
   `idType` int(11) NOT NULL,
   `idFactionQG` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `factionsqg`
+--
+
+DROP TABLE IF EXISTS `factionsqg`;
+CREATE TABLE IF NOT EXISTS `factionsqg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `posExtX` float NOT NULL,
+  `posExtY` float NOT NULL,
+  `posExtZ` float NOT NULL,
+  `posIntX` float NOT NULL,
+  `posIntY` float NOT NULL,
+  `posIntZ` float NOT NULL,
+  `virtualworld` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `factionstype`
+--
+
+DROP TABLE IF EXISTS `factionstype`;
+CREATE TABLE IF NOT EXISTS `factionstype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -102,6 +172,62 @@ CREATE TABLE IF NOT EXISTS `houses` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `housestype`
+--
+
+DROP TABLE IF EXISTS `housestype`;
+CREATE TABLE IF NOT EXISTS `housestype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `interior` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `items`
+--
+
+DROP TABLE IF EXISTS `items`;
+CREATE TABLE IF NOT EXISTS `items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idContainer` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
+  `itemType` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `itemstype`
+--
+
+DROP TABLE IF EXISTS `itemstype`;
+CREATE TABLE IF NOT EXISTS `itemstype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `price` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `qgtype`
+--
+
+DROP TABLE IF EXISTS `qgtype`;
+CREATE TABLE IF NOT EXISTS `qgtype` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `interior` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `vehicles`
 --
 
@@ -111,6 +237,21 @@ CREATE TABLE IF NOT EXISTS `vehicles` (
   `idModel` int(11) NOT NULL,
   `idTrunk` int(11) NOT NULL,
   `idOwner` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `vehiclesmodels`
+--
+
+DROP TABLE IF EXISTS `vehiclesmodels`;
+CREATE TABLE IF NOT EXISTS `vehiclesmodels` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 COMMIT;
