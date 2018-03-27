@@ -20,7 +20,8 @@ enum E_VEHICLE_INFOS {
 
 // =============================
 
-new gVehiclesInfos[MAX_HOUSES][E_VEHICLE_INFOS];
+new gVehiclesInfos[MAX_HOUSES][E_VEHICLE_INFOS],
+    gVehiclesInfosClone[1][E_VEHICLE_INFOS];
 
 // =============================
 
@@ -39,5 +40,5 @@ hook OnGameModeInit()
 */
 stock ResetVehicleVars(vehID)
 {
-
+	gVehicleInfos[vehID] = gVehicleInfosClone[0];
 }
