@@ -32,25 +32,27 @@ enum E_BUSINESS_INFOS {
 
 // =============================
 
-new gBizInfos[MAX_BUSINESS][E_BUSINESS_INFOS];
+new gBizInfos[MAX_BUSINESS][E_BUSINESS_INFOS],
+    gBizInfosClone[1][E_BUSINESS_INFOS];
 
 // =============================
 
 hook OnGameModeInit()
 {
+	gBizInfosClone[0][bizSqlID] = -1;
+	gBizInfosClone[0][bizOwner] = -1;
+	gBizInfosClone[0][bizPosExtX] = -1.0;
+	gBizInfosClone[0][bizPosExtY] = -1.0;
+	gBizInfosClone[0][bizPosExtZ] = -1.0;
+	gBizInfosClone[0][bizPosIntX] = -1.0;
+	gBizInfosClone[0][bizPosIntY] = -1.0;
+	gBizInfosClone[0][bizPosIntZ] = -1.0;
+	gBizInfosClone[0][bizIdType] = -1;
+	gBizInfosClone[0]bizVW] = -1;
+	
 	for(new i = 0; i < MAX_BUSINESS; i++)
 	{
-		gBizInfos[i][bizSqlID] = -1;
-		//gBizInfos[i][bizName] = "";
-		gBizInfos[i][bizOwner] = -1;
-		gBizInfos[i][bizPosExtX] = -1.0;
-		gBizInfos[i][bizPosExtY] = -1.0;
-		gBizInfos[i][bizPosExtZ] = -1.0;
-		gBizInfos[i][bizPosIntX] = -1.0;
-		gBizInfos[i][bizPosIntY] = -1.0;
-		gBizInfos[i][bizPosIntZ] = -1.0;
-		gBizInfos[i][bizIdType] = -1;
-		gBizInfos[i]bizVW] = -1;
+		ResetBizVars(i);
 	}
 
 	return Y_HOOKS_CONTINUE_RETURN_1;
@@ -66,15 +68,5 @@ hook OnGameModeInit()
 */
 stock ResetBizVars(bizId)
 {
-	gBizInfos[bizId][bizSqlID] = -1;
-	//gBizInfos[bizId][bizName] = "";
-	gBizInfos[bizId][bizOwner] = -1;
-	gBizInfos[bizId][bizPosExtX] = -1.0;
-	gBizInfos[bizId][bizPosExtY] = -1.0;
-	gBizInfos[bizId][bizPosExtZ] = -1.0;
-	gBizInfos[bizId][bizPosIntX] = -1.0;
-	gBizInfos[bizId][bizPosIntY] = -1.0;
-	gBizInfos[bizId][bizPosIntZ] = -1.0;
-	gBizInfos[bizId][bizIdType] = -1;
-	gBizInfos[bizId]bizVW] = -1;
+	gBizInfos[bizId] = gBizInfosClone[0];
 }
