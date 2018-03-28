@@ -1,3 +1,74 @@
+# Français
+
+
+![](https://i.imgur.com/vh6uRcr.png)
+
+
+![Pawn](https://www.compuphase.com/images/pawnicon48.gif) Programmé en Pawn [![Pawn](https://www.compuphase.com/images/pawnicon48.gif)](https://nodesource.com/products/nsolid)
+
+Dynamic Gamemode est un gamemode développé par plusieurs personne de la communauté française de San Andreas Multiplayer.
+Il a été développé pour avoir une bonne performance et un gamemode dynamique.
+Voici quelques caractéristiques du gamemode :
+
+  - Gamemode semi-roleplay
+  - Gamemode developé avec la technologie SQL
+  - Un gamemode simple à configurer mais puissant.
+
+
+# Nouvelles fonctionnalités
+
+  - Pour le moment ? Aucune :)
+
+# Installation
+
+Le gamemode peut être installé de différente façon. Vous pouvez l'installer à la main ou en utilisant l'installateur automatique.
+
+
+
+
+# Développement
+
+Vous voulez contribuer ? Super !
+Envoyez juste votre code en faisant un pull request ou demandez à être intégré dans l'équipe de développement !
+
+## Les includes et plugins requis
+
+Ces includes sont requis pour compiler le gamemode :
+- [YSI4](https://github.com/pawn-lang/YSI-Includes)
+- [easydialog](https://github.com/Awsomedude/easyDialog)
+- [sscanf](https://github.com/maddinat0r/sscanf)
+- [mysql R41 by BlueG](https://github.com/pBlueG/SA-MP-MySQL)
+- [streamer by Incognito](https://github.com/samp-incognito/samp-streamer-plugin)
+- [Zeex's PAWN Compiler](https://github.com/Zeex/pawn/releases)
+
+Ces plugins sont requis pour allumer le serveur :
+- [sscanf](https://github.com/maddinat0r/sscanf)
+- [mysql R41 by BlueG](https://github.com/pBlueG/SA-MP-MySQL)
+- [streamer by Incognito](https://github.com/samp-incognito/samp-streamer-plugin)
+
+# A faire
+
+Pour les choses à faire, allez directement dans l'onglet Projects, c'est la-bas qu'on les inscrits.
+
+License
+----
+
+GNU GPL V3
+
+
+**Logiciel libre, géniale !**
+
+
+# English
+
+
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+
+
+
+
 ![](https://i.imgur.com/vh6uRcr.png)
 
 
