@@ -17,7 +17,11 @@
 
 #define TCHAT_MAX_STR 			145
 
-// =======
+// =============================
 
 #define MAX_BUSINESS			1024
 #define MAX_HOUSES				1024
+
+// =============================
+
+#define SERVER_AC 1
