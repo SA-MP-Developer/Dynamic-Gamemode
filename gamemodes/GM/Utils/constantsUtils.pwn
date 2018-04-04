@@ -21,7 +21,8 @@
 
 #define MAX_BUSINESS			1024
 #define MAX_HOUSES				1024
-
+#define MAX_FACTIONS			1024
+#define MAX_QG					1024
 // =============================
 
 #define SERVER_AC 1

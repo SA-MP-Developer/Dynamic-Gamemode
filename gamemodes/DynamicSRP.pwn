@@ -48,7 +48,7 @@
 #include <a_samp>
 #include <YSI\y_hooks>
 #include <YSI\y_iterate>
-
+#include <streamer>
 
 #if defined FindModelFileNameFromCRC
 	#define SAMP_VERSION "0.3.7DL"

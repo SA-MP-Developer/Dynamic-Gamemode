@@ -15,3 +15,5 @@
 #include "GM/Utils/dateManipulations.pwn"
 
 #include "GM/MYSQL/sqMain.pwn"
+
+#include "GM/Anti-cheat/acMain.pwn"

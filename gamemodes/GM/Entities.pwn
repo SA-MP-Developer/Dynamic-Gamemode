@@ -15,3 +15,6 @@
 #include "GM/Entities/Houses/loadHouses.pwn"
 
 #include "GM/Entities/Vehicles/loadVehicles.pwn"
+
+#include "GM/Entities/Factions/loadFactions.pwn"
+
