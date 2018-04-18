@@ -25,13 +25,15 @@ public LoadFactions()
 
 public OnFactionsLoad()
 {
-	new count, FactionName[LONG_STR], FactionType;
+	new count, FactionName[LONG_STR], FactionType, req[100];
 	cache_get_row_count(count); // Get total rows
 	for(new i; i < count; i++) 
 	{
+		cache_get_value_name(i, "name", FactionName);
+		cache_get_value_name_int(i, "idType", FactionType);
+		mysql_format(_Connect, "SELECT * FROM `"#QG_TAB"` WHERE name = `%s`", FactionName);
+		mysql_tquery(_Connect, "SELECT * FROM `"#QG_TAB"`", "OnQgLoad", "sii", FactionName, FactionType, FactionID);
 	}
-	cache_get_value_name(0, "name", FactionName);
-	cache_get_value_name_int(0, "idType", FactionType);
-	mysql_tquery(_Connect, "SELECT * FROM `"#QG_TAB"`", "OnQgLoad", "si", FactionName, FactionType);
+	
 	return 1;
 }
